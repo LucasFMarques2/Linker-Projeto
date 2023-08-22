@@ -16,7 +16,7 @@
 
 .light{
   --text-color: black;
-  --bg-url: url("./assets/bg-desktop-light.jpg");
+  --bg-url: url("./assets/bg-mobile-light.jpg");
   --stroke-color: rgba(0, 0, 0);
   --bg-color: rgba(0,0,0,0.1);
   --bg-hover: rgba(0,0,0,0.05);
@@ -26,7 +26,7 @@
 
 body *{
   font-family: 'Inter', sans-serif;
-  color:var(--text-color)
+  color:var(--text-color);
 }
 
 body {
@@ -156,3 +156,12 @@ footer{
 }
 
 
+/* media queries */
+@media(min-width: 700px){
+  :root{
+    --bd-url: url(./assets/bg-desktop.pnj);
+  }
+  .light{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
