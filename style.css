@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-color: white;
+  --bg-url: url("./assets/bg-mobile.jpg");
+  --stroke-color: rgba(255,255,255,0.5);
+  --bg-color: rgba(255,255,255,0.1);
+  --bg-hover: rgba(255,255,255,0.05);
+  --icon-hover: rgb(126, 47, 142);
+  --swtich-url-bg: url(./assets/moon-stars.svg);
+}
+
+.light{
+  --text-color: black;
+  --bg-url: url("./assets/bg-desktop-light.jpg");
+  --stroke-color: rgba(0, 0, 0);
+  --bg-color: rgba(0,0,0,0.1);
+  --bg-hover: rgba(0,0,0,0.05);
+  --icon-hover: rgb(182, 125, 198);
+  --swtich-url-bg: url(./assets/sun.svg);
+}
+
+body *{
+  font-family: 'Inter', sans-serif;
+  color:var(--text-color)
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+#container {
+  width: 360px;
+  margin: 56PX auto 0PX ;
+  padding: 0 24px;
+}
+/* Profile*/
+#profile{
+  text-align: center;
+  padding: 24PX;
+
+}
+
+#profile img{
+  width:110px;
+  
+}
+
+
+#userName{
+  display: block;
+  padding: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*Switch*/
+
+#switch{
+  position: relative;
+  width: 65px;
+  margin-left: 40%;
+}
+
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white var(--swtich-url-bg) no-repeat center;
+  border: none;
+  border-radius: 50%;
+
+  position: absolute;
+  margin: -4px;
+  z-index: 1;
+  left: 0;
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+}
+
+#switch span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--bg-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+  -webkit-backdrop-filter: blur(4px);
+}
+
+
+ul{
+  margin-top: 30px;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+}
+
+ul li a { 
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--bg-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+
+  border-radius: 8px;
+  text-decoration: none;
+  
+  font-weight: 500px;
+  trasition: background 0.5s;
+}
+
+ul li a:hover{
+  background: var(--bg-hover);
+  border: 1.5px solid var(--text-color);
+  backdrop-filter: blur(4px);
+}
+
+#social-icons{
+  padding: 0px 24px 0 24px;
+  margin-top: 20px;
+  text-align: center;
+}
+ion-icon{
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+
+ion-icon:hover{
+  border-radius: 15px;
+  background: var(--icon-hover);
+  width: 30px;
+  height: 30px;
+  padding: 13px;
+
+}
+
+footer{
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+
