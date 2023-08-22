@@ -8,7 +8,7 @@ function mudarModo() {
    //trocar a img
 
    if(html.classList.contains('light')){
-    img.setAttribute('src', './assets/avatar-sun.png')
+    img.setAttribute('src', './assets/Avatar-sun.png')
    }else{
     img.setAttribute("src", "./assets/avatar.png")
    }
