@@ -76,13 +76,18 @@ body {
   position: absolute;
   margin: -4px;
   z-index: 1;
-  left: 0;
+  animation: slide-off 0.3s forwards;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--bg-hover);
 }
 
 .light #switch button{
-  right: 0;
-  left: initial;
+  animation: slide-in 0.3s forwards;
 }
+
+
 
 #switch span{
   display: block;
@@ -159,9 +164,29 @@ footer{
 /* media queries */
 @media(min-width: 700px){
   :root{
-    --bd-url: url(./assets/bg-desktop.pnj);
+    --bd-url: url(./assets/bg-desktop.jpg);
   }
   .light{
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animation */
+
+@keyframes slide-in{
+  from {
+    left: 0;
+  }
+  to {
+    left: 60%;
+  }
+}
+
+@keyframes slide-off{
+  from {
+    left: 60%;
+  }
+  to {
+    left: 0;
   }
 }
